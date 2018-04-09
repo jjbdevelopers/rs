@@ -134,10 +134,10 @@ public class GestorUsuario extends Gestor {
         if (!UtilCorreo.validarCorreo(usuario.getCorreo())) {
             throw new Exception("Ingresa un correo correcto.", UtilLog.TW_VALIDACION);
         }
-        if (usuario.getDispositivos() == null || usuario.getDispositivos().getSerial() == null
-                || usuario.getDispositivos().getSerial().equalsIgnoreCase("")) {
-            throw new Exception("Ingresa un celular correcto.", UtilLog.TW_VALIDACION);
-        }
+//        if (usuario.getDispositivos() == null || usuario.getDispositivos().getSerial() == null
+//                || usuario.getDispositivos().getSerial().equalsIgnoreCase("")) {
+//            throw new Exception("Ingresa un celular correcto.", UtilLog.TW_VALIDACION);
+//        }
 //        if (usuario.getNombre() == null || usuario.getNombre().equalsIgnoreCase("")) {
 //            throw new Exception("Ingresa tu nombre.", UtilLog.TW_VALIDACION);
 //        }
@@ -164,21 +164,10 @@ public class GestorUsuario extends Gestor {
         try {
             this.abrirConexion();
             this.inicioTransaccion();
+            
             UsuarioDAO usuarioDAO = new UsuarioDAO(conexion);
-            GrupoDAO grupoDAO = new GrupoDAO(conexion);
-            DispositivosDAO dispositivosDAO = new DispositivosDAO(conexion);
-
             usuarioDAO.insertarUsuario(usuarios);
-
-            Grupos g = new Grupos(new GruposPK(usuarios.getCorreo()), "MIS DISPOSITIVOS");
-            Dispositivos d = new Dispositivos(new DispositivosPK(usuarios.getCorreo()), "MOVIL", usuarios.getDispositivos().getSerial());
-            g = grupoDAO.insertarGrupos(g);
-            d = dispositivosDAO.insertarDispositivos(d);
-
-            GruposDispositivos gd = new GruposDispositivos(g.getGruposPK().getCorreo(), g.getGruposPK().getCodGrupo(), d.getDispositivosPK().getCorreo(), d.getDispositivosPK().getCodDispositivo());
-            gd.setAprobado(Boolean.TRUE);
-            grupoDAO.insertarGruposDispositivos(gd);
-
+            
             this.finTransaccion();
         } catch (Exception e) {
             this.devolverTransaccion();

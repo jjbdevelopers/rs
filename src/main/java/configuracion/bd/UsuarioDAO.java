@@ -105,11 +105,10 @@ public class UsuarioDAO {
         try {
             consulta = new Consulta(this.conexion);
             StringBuilder sql = new StringBuilder(
-                    "SELECT correo, cod_documento, documento_usuario, nombre, apellido, clave, activo, fecha_registro, D.cod_dispositivo, D.identificador, D.fecha, D.serial"
+                    "SELECT correo, cod_documento, documento_usuario, nombre, apellido, clave, activo, fecha_registro"
                     + " FROM usuarios"
-                    + " JOIN dispositivos D USING (correo)"
                     + " WHERE (correo='" + usuario.getCorreo().toLowerCase().trim() + "' OR TRIM(REGEXP_REPLACE(correo, '@.*', '', 'g'))::varchar='" + usuario.getCorreo().toLowerCase().trim() + "')"
-                    + " AND clave=md5('" + usuario.getClave().trim() + "') AND D.identificador like 'MOVIL%'"
+                    + " AND clave=md5('" + usuario.getClave().trim() + "')"
             );
             rs = consulta.ejecutar(sql);
             if (rs.next()) {
