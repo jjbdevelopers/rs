@@ -117,7 +117,6 @@ public class UsuarioDAO {
                 usuario.setClave(rs.getString("clave"));
                 usuario.setNombre(rs.getString("nombre"));
                 usuario.setApellido(rs.getString("apellido"));
-                usuario.setDispositivos(new Dispositivos(new DispositivosPK(rs.getString("correo"), rs.getInt("cod_dispositivo")), rs.getString("identificador"), rs.getDate("fecha"), rs.getString("serial")));
                 usuario.setSuccess(Boolean.TRUE);
             }
             return usuario;
