@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"                
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"                
+                xmlns:f="http://java.sun.com/jsf/core"
+                template="/template_1.xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:define name="content">
+        <h:form id="testing">
+
+            <p:dataTable var="res" value="#{uiUsuario.usuarioTestResultadoList}" rowStyleClass="Centro"
+                         widgetVar="resTable">
+                <p:column headerText="Examen">
+                    <h:outputText value="#{res.usuarioTestResultadoPK.codExamen}" />
+                </p:column>
+
+                <p:column headerText="Pregunta">
+                    <h:outputText value="#{res.usuarioTestResultadoPK.codPregunta}" />
+                </p:column>
+
+                <p:column headerText="Respuesta Usuario">
+                    <h:outputText value="#{res.respuesta}" />
+                </p:column>
+
+                <p:column headerText="Respuesta Correcta">
+                    <h:outputText value="#{res.respuestaCorrecta}" />
+                </p:column>
+
+                <p:column headerText="Aprueba" filterBy="#{res.aprueba}" filterMatchMode="equals">
+                    <f:facet name="filter">
+                        <p:selectOneButton onchange="PF('resTable').filter()">
+                            <f:converter converterId="javax.faces.Boolean" />
+                            <f:selectItem itemLabel="todas" itemValue="" />
+                            <f:selectItem  itemLabel="correcta" itemValue="true" />
+                            <f:selectItem itemLabel="incorrecta" itemValue="false" />
+                        </p:selectOneButton>
+                    </f:facet>
+                    <div style="#{res.style}">
+                        <p:triStateCheckbox value="#{res.apruebaInt}" /> 
+                    </div>
+                </p:column>
+
+            </p:dataTable>
+            <h:panelGrid columns="2">
+                <h:outputLabel for="otPreguntas"  value="Preguntas" style="color: #008894; font-size: 25px; font-family: Calibri;"/>
+                <h:outputText id="otPreguntas" value="#{uiUsuario.total()}" style="font-size: 25px; font-family: Calibri;"/>
+                <h:outputLabel for="otCorrectas"  value="Correctas" style="color: #008894; font-size: 25px; font-family: Calibri;"/>
+                <h:outputText id="otCorrectas" value="#{uiUsuario.correctas()}" style="font-size: 25px; font-family: Calibri;"/>
+                <h:outputLabel for="otIncorrectas"  value="Incorrectas" style="color: #008894; font-size: 25px; font-family: Calibri;"/>
+                <h:outputText id="otIncorrectas" value="#{uiUsuario.incorrectas()}" style="color: red; font-size: 25px; font-family: Calibri;"/>
+                <h:outputLabel for="otPorcentaje"  value="Porcentaje" style="color: #008894; font-size: 25px; font-family: Calibri;"/>
+                <h:outputText id="otPorcentaje" value="#{uiUsuario.porcentaje()}" style="font-size: 25px; font-family: Calibri;"/>
+            </h:panelGrid>
+            <br/>
+            <p:commandButton value="Volver al menu"  action="#{uiExamen.volverMenu()}"/>
+
+        </h:form>        
+    </ui:define>        
+</ui:composition>

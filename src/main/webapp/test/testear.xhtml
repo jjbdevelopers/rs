@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"                
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"                
+                xmlns:f="http://java.sun.com/jsf/core"
+                template="/template_1.xhtml"
+                xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+    <ui:define name="content">
+        <h:form id="testing" >
+            <h:panelGrid columns="3" style="margin-bottom:10px" cellpadding="5">
+                <h:outputText value="Mostrar Respuestas: " />
+                <p:inputSwitch value="#{uiUsuario.examen.mostrarRespuesta}" />
+                <p:commandButton icon="ui-icon-check" value="Submit"  update="@parent:@parent"></p:commandButton>            
+            </h:panelGrid>
+            <p:dataTable id="dtPreguntas" value="#{uiUsuario.examen.examenDetalles}" var="pregunta" paginator="true" rows="1"
+                         rowIndexVar="idx">
+                <p:column headerText="Pregunta" id="columnPregunta" > 
+
+                    <h:outputText value="Pregunta #{pregunta.examenDetallePK.codPregunta}" style="color: #008894; font-size: 25px; font-family: Calibri;"/>
+                    <p:panel>
+                        <p:graphicImage value="/images/preguntas/#{pregunta.examenDetallePK.codExamen}-#{pregunta.examenDetallePK.codPregunta}.png"
+                                        width="90%"/> 
+                    </p:panel>
+                    <p:panel>
+                        <h:selectManyCheckbox  value="#{pregunta.respuestaSeleccionadaMultiple}" rendered="#{pregunta.tipoRespuesta eq 'M'}"
+                                               style="font-size: 20px; font-family: Calibri"
+                                               layout="pageDirection">
+                            <f:selectItem itemLabel="A" itemValue="A" />
+                            <f:selectItem itemLabel="B" itemValue="B" />
+                            <f:selectItem itemLabel="C" itemValue="C" />
+                            <f:selectItem itemLabel="D" itemValue="D" />
+                            <p:ajax event="change" process="@this"/>
+                        </h:selectManyCheckbox >
+                        <h:selectOneRadio  value="#{pregunta.usuarioTest.respuesta}" rendered="#{pregunta.tipoRespuesta eq 'U'}" 
+                                           style="font-size: 20px; font-family: Calibri" 
+                                           layout="pageDirection">
+                            <f:selectItem itemLabel="A" itemValue="A" />
+                            <f:selectItem itemLabel="B" itemValue="B" />
+                            <f:selectItem itemLabel="C" itemValue="C" />
+                            <f:selectItem itemLabel="D" itemValue="D" />
+                            <p:ajax event="change" process="@this" update="pgRespuestas" />
+                        </h:selectOneRadio>
+                    </p:panel>
+                    <h:panelGroup id="pgRespuestas">
+                        <p:panel rendered ="#{uiUsuario.examen.mostrarRespuesta and pregunta.usuarioTest.respuesta ne null and pregunta.usuarioTest.respuesta ne '' and pregunta.usuarioTest.respuesta ne 'N'}">
+                            <h:outputText value="Respuesta #{pregunta.examenDetallePK.codPregunta} - #{pregunta.respuesta} - #{pregunta.comentario}"  style="color: #008894; font-size: 25px; font-family: Calibri;" />
+                        </p:panel>
+                    </h:panelGroup>
+                </p:column>
+
+
+            </p:dataTable>
+            <br/>
+            <p:commandButton value="Terminar Test"  action="#{uiExamen.terminarTest()}"/>
+
+        </h:form>        
+    </ui:define>        
+</ui:composition>

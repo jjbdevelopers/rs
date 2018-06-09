@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>OASYS</title>
+        <meta http-equiv="Refresh" content="#{sesion.logueado eq true?'0;URL=/test/principal.jsf':''}"></meta>
+    </h:head>
+    <h:body id="body"> 
+        <h:outputScript library="js" name="general.js"/>
+        <div align="center">
+            <h:form id="formulario">
+                <tr>
+                    <td>
+                        <p:panel style="width: 35%; margin-top: 10%; font-size: 12px; text-align: center">
+                            <p:messages id="messages" showDetail="true" autoUpdate="true"/>
+                            <f:facet name="header">
+                                <br/>
+                                <img src="data:image/png;base64,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"
+                                     style="padding-top: 6px; padding-left: 15px" />
+                            </f:facet>
+
+                            <p:focus context="grid"/>
+                            <p:spacer height="40"/>
+
+
+                            <p:panelGrid id="grid" style="margin: auto auto;" columns="1" layout="grid">
+                                <p:spacer height="10"/>
+                                <p:inputText id="inTxtUsuario" value="#{uiUsuario.usuario.email}" autocomplete="true"
+                                             placeholder="correo - pepito-perez@domain.com.co"
+                                             style="width: 250px; height: 50px; text-align: center; font-size: 14px;">
+                                </p:inputText>
+
+
+                                <p:commandButton value="Iniciar Test" style="margin: auto auto;width: 270px; height: 50px;" action="#{uiUsuario.registrarSesion()}"/>
+                                <p:spacer height="10"/>
+                            </p:panelGrid>
+                            <!--<h:outputText value="Ayudanos a mejorar - dona en BTC: 1D1WLz6qyb9gb5ewuc1mh737UmoLkKdtDd"/>-->
+                            <p:spacer height="40"/>
+
+                        </p:panel> 
+                    </td>
+                </tr>
+                <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+
+                <p:dialog widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false">
+                    <p:graphicImage value="/resources/imagenes/barra.gif" />
+                </p:dialog>
+            </h:form>
+        </div>
+    </h:body>
+</html>
