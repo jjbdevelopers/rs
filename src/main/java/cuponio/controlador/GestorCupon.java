@@ -14,7 +14,7 @@ import java.util.Random;
 
 /**
  *
- * @author Julian
+ * @author Sinergia
  */
 public class GestorCupon extends Gestor {
 

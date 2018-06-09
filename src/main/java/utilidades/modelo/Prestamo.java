@@ -8,7 +8,7 @@ package utilidades.modelo;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class Prestamo {
     

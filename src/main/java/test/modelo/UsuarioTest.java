@@ -24,7 +24,7 @@ import utilidades.modelo.UtilMSG;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 @Entity
 @Table(name = "usuario_test")

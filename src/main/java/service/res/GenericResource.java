@@ -53,7 +53,7 @@ import utilidades.modelo.UtilidadesGeneral;
 /**
  * REST Web Service
  *
- * @author Julian
+ * @author Sinergia
  */
 @Path("generic")
 public class GenericResource {

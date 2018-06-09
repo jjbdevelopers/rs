@@ -16,7 +16,7 @@ import conexion.Consulta;
 
 /**
  *
- * @author Julian
+ * @author Sinergia
  */
 public class EstablecimientoDAO {
 

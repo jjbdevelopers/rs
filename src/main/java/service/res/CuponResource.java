@@ -41,7 +41,7 @@ import utilidades.modelo.UtilidadesGeneral;
 /**
  * REST Web Service
  *
- * @author Julian
+ * @author Sinergia
  */
 @Path("cupon")
 public class CuponResource {

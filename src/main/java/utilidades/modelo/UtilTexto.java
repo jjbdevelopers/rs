@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class UtilTexto {
 

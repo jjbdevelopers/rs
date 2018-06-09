@@ -13,7 +13,7 @@ import publico.modelo.LocalizacionesDispositivo;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class LocalizacionesDispositivoDAO {
 

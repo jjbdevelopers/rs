@@ -7,7 +7,7 @@ package inicio.modelo;
 
 /**
  *
- * @author Julian
+ * @author Sinergia
  */
 public class Administrador extends Usuario {
 

@@ -13,7 +13,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class Dispositivos implements Serializable {
 

@@ -13,7 +13,7 @@ import sun.misc.BASE64Encoder;
 
 /**
  *
- * @author Julian
+ * @author Sinergia
  */
 public class UtilRest {
 

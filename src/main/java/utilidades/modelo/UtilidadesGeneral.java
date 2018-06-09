@@ -21,7 +21,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Julian
+ * @author Sinergia
  */
 public class UtilidadesGeneral {
 

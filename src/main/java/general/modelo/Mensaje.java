@@ -8,7 +8,7 @@ package general.modelo;
 import java.util.ArrayList;
 
 /**
- * @author juliano
+ * @author Sinergiao
  */
 public class Mensaje {
     public static String DATA = "data";

@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 
 public class LocalizacionesDispositivo implements Serializable {

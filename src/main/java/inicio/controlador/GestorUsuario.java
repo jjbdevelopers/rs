@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  *
- * @author Julian
+ * @author Sinergia
  */
 public class GestorUsuario extends Gestor {
 

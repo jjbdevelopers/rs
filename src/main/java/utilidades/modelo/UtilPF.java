@@ -9,7 +9,7 @@ import org.primefaces.context.RequestContext;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class UtilPF {
 

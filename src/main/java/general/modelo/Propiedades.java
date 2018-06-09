@@ -10,7 +10,7 @@ import utilidades.modelo.UtilLog;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class Propiedades {
 

@@ -16,7 +16,7 @@ import test.modelo.UsuarioTestResultado;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class GestorExamen extends Gestor {
 

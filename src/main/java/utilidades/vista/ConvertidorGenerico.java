@@ -17,7 +17,7 @@ import javax.faces.convert.FacesConverter;
  * a ser mostradas en los componentes graficos, funciona correctamente para
  * listas de seleccion tipo selectItems
  *
- * @author juliano
+ * @author Sinergiao
  */
 @FacesConverter("convertidorGenerico")
 public class ConvertidorGenerico implements Converter {

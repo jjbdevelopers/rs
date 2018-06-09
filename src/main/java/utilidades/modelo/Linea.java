@@ -14,7 +14,7 @@ import javax.faces.bean.SessionScoped;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 @ManagedBean
 @SessionScoped

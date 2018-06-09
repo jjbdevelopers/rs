@@ -33,7 +33,7 @@ import utilidades.modelo.UtilidadesGeneral;
 /**
  * REST Web Service
  *
- * @author juliano
+ * @author Sinergiao
  */
 @Path("localizador")
 public class LocalizadorResource {

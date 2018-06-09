@@ -6,7 +6,7 @@ package inicio.modelo;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class Rol {
     

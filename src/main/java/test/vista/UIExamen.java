@@ -20,7 +20,7 @@ import utilidades.modelo.UtilPF;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 @ManagedBean(name = "uiExamen")
 @SessionScoped

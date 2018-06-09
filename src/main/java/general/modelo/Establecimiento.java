@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  *
- * @author Julian
+ * @author Sinergia
  */
 public class Establecimiento {
     private int codigo;

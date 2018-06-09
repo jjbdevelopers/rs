@@ -19,7 +19,7 @@ import publico.modelo.Usuarios;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class DispositivosDAO {
 

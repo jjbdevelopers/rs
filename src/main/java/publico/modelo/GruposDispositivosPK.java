@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 
 public class GruposDispositivosPK implements Serializable {

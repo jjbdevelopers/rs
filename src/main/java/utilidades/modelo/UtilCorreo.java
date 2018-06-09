@@ -20,7 +20,7 @@ import javax.ws.rs.core.Response;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class UtilCorreo {
 

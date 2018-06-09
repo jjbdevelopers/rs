@@ -20,7 +20,7 @@ import utilidades.modelo.UtilPF;
 
 /**
  *
- * @author Julian
+ * @author Sinergia
  */
 @ManagedBean(name = "uiSesion")
 public class UISesion {

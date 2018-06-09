@@ -9,7 +9,7 @@ import javax.faces.context.FacesContext;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class UtilMSG {
 

@@ -21,7 +21,7 @@ import test.modelo.UsuarioTestResultado;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class ExamenDAO {
 

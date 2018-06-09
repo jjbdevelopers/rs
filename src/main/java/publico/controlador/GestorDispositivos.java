@@ -13,7 +13,7 @@ import publico.modelo.Dispositivos;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 public class GestorDispositivos extends Gestor {
 

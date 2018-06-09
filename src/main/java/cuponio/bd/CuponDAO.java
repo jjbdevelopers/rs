@@ -20,7 +20,7 @@ import utilidades.modelo.UtilLog;
 
 /**
  *
- * @author Julian
+ * @author Sinergia
  */
 public class CuponDAO {
 

@@ -23,7 +23,7 @@ import utilidades.modelo.UtilRest;
 
 /**
  *
- * @author juliano
+ * @author Sinergiao
  */
 @ManagedBean(name = "uiUsuario")
 @SessionScoped
