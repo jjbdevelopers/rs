@@ -60,7 +60,7 @@ public class UIExamen {
             if (e.isPrivado()) {
                 Sesion s = (Sesion) UtilJSF.getBean("sesion");
                 if (!gestorUsuario.usuarioAutorizadoExamen(s.getTester().getEmail(), e.getCodExamen())) {
-                    UtilPF.addSuccessMsg("Ayudanos a Mejorar", "Este TEST es cerrado, para adquirirlo debes enviar 30 (US) dolares  en BTC - ETH a las siguientes direcciones<br/><br/> <ul type = circle><br/><li>BTC - 3E43Vh3MABRgRqszxVDE8oJ5xF15mBDx4r</li><br/></ul>"
+                    UtilPF.addSuccessMsg("Ayudanos a Mejorar", "Este TEST es cerrado, para adquirirlo debes enviar 45 (US) dolares  en BTC a la siguiente dirección<br/><br/> <ul type = circle><br/><li>BTC - 3E43Vh3MABRgRqszxVDE8oJ5xF15mBDx4r</li><br/></ul>"
                             + "<br/><br/>Luego envias un correo con el soporte de pago a sinergia.cor@gmail.com, donde indiques el codigo del examen que deseas habilitar."
                             + "<br/><br/>Se habilitará el correo de donde envies el comprobante, si se descubre que compartes tu correo a otros usuarios se te inactivara tu cuenta."
                             + "<br/><br/>Tu aporte ayudara a desarrollar test a otros usuarios.");
