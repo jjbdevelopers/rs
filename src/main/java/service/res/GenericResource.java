@@ -316,7 +316,7 @@ public class GenericResource {
             @FormParam("correo") String correo, @FormParam("telefono") String telefono,
             @FormParam("mensaje") String mensaje) throws IOException {
         final String username = "oasys.scon@gmail.com";
-        final String password = "@Contacto2016";
+        final String password = "@Contacto2019";
         final String asunto = "Nuevo Mensaje - " + nombre;
 
         if (!UtilCorreo.validarCorreo(correo)) {
